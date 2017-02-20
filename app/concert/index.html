@@ -1,0 +1,23 @@
+<div class="fashion-section">
+	<div class="container">
+		<shopping-cart-component total-tickets="concertCtrl.totalTicketsAdd">
+		</shopping-cart-component>
+		<h3 class="tittle">Entradas</h3>
+		<div class="fashion-info">
+			<div class="col-md-4 fashion-grids" ng-repeat="ticket in concertCtrl.ticketsOpts">
+				<figure class="effect-bubba">
+					<img src="images/f1.jpg" alt=""/>
+					<figcaption>
+						<h4>{{ticket.nombre}}</h4>
+						<p>{{ticket.precio}} €</p>
+						<input type="number" ng-init="concertCtrl.numberTickets[$index] = 1"
+							   ng-model="concertCtrl.numberTickets[$index]">
+						<p class="cart">
+							<button class="btn btn-primary" ng-click="concertCtrl.addTickets($index)">Añadir</button>
+						</p>
+					</figcaption>
+				</figure>
+			</div>
+		</div>
+	</div>
+</div>

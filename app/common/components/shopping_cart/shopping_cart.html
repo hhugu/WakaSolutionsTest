@@ -1,0 +1,15 @@
+<div class="header_right">
+	<div class="cart box_1">
+			<div class="total">
+				<span id="simpleCart_quantity" class="simpleCart_quantity">
+					{{cartCtrl.totalTickets}}
+				</span> Entrada<span ng-if="cartCtrl.totalTickets > 1 || cartCtrl.totalTickets === 0">s</span>
+				<span class="simpleCart_total">Total: {{cartCtrl.totalPrice}} €</span> 
+			</div>
+			<a ng-click="cartCtrl.buy()">
+				<i class="glyphicon glyphicon-shopping-cart"></i>
+				Compar
+			</a>
+		<div class="clearfix"> </div>
+	</div>
+</div>
